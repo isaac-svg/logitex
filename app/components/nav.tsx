@@ -11,7 +11,6 @@ const NavBar = (props: Props) => {
   const [nav, setNav] = useState(false);
   const [ispageHover, setIsPageHover] = useState(false);
   const [isDemoHover, setIsDemoHover] = useState(false);
-  // const [showdemo, setIsDemoHover] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
