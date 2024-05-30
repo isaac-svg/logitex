@@ -9,7 +9,7 @@ const HomeAbout = (props: Props) => {
     <>
       <div className="bg-[#0c0b1a] w-full h-fit py-[120px] flex flex-col md:flex-row gap-12 ">
         {/* image */}
-        <div className="flex-[0.8] border relative">
+        <div className="flex-[0.8]  relative">
           <div className=" w-4/5 relative mx-auto ">
             <Image
               src={'/assets/home/shipwithbanner.webp'}
