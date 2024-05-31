@@ -1,16 +1,21 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DemoDropDown from './demodropdown';
 import PagesDropDown from './pagesdropdown';
 
 type Props = {};
 
 const NavBar = (props: Props) => {
-  const [nav, setNav] = useState(false);
-  const [ispageHover, setIsPageHover] = useState(false);
-  const [isDemoHover, setIsDemoHover] = useState(false);
+  const [nav, setNav] = useState<boolean>(false);
+  const [ispageHover, setIsPageHover] = useState<boolean>(false);
+  const [isDemoHover, setIsDemoHover] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMobile(true);
+  }, [nav]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -57,7 +62,7 @@ const NavBar = (props: Props) => {
             {/* <li>PAGES</li> */}
           </ul>
         </div>
-        <div className="hidden md:inline-block">
+        <div className="hidden md:inline-block ">
           <p className="text-[#d2d1e9] text-sm font-medium">
             TALK TO AN EXPERT
           </p>{' '}
@@ -77,105 +82,130 @@ const NavBar = (props: Props) => {
         </div>{' '}
       </div>
       <div
-        className={`static  w-full transition-all h-[3000px] duration-1000 ease-out z-[999] md:hidden block ${
+        className={`static bg-fixed h-full overflow-auto w-full transition-all  duration-1000 ease-out z-[80] md:hidden  block ${
           nav ? '   duration-200 ' : ''
         }`}
       >
-        <div className="overflow-hidden relative z-50">
+        <div className="overflow-x-hidden h-screen overflow-auto relative z-[99]">
           <ul
-            className={
+            className={`${
               nav
-                ? 'md:hidden fixed  top-20 flex flex-col text-xs w-full h-[90%]  ease-in duration-300 z-10 bg-white  '
-                : 'fixed top-20  h-[90%] flex flex-col items-start justify-between ease-in duration-300 z-10 w-full'
-            }
+                ? 'md:hidden fixed  top-20 flex flex-col text-xs w-full bg-fixed  ease-in duration-300 z-[999]  bg-white h-screen overflow-y-auto pb-[60px]  '
+                : 'fixed top-20   flex flex-col items-start justify-between ease-in duration-300 z-10 w-full'
+            } pl-8 pr-4 `}
           >
             <li
-              onClick={handleNav}
-              onPointerEnter={() => setIsDemoHover(true)}
-              onPointerLeave={() => setIsDemoHover(false)}
               className={`py-6 flex flex-col gap-8 transition-all duration-700 ${
                 !nav ? 'hidden' : ''
               }`}
             >
-              <Link href="demo/demo-three" className="">
+              <p
+                className=""
+                // onPointerEnter={() => setIsDemoHover(true)}
+                // onPointerLeave={() => setIsDemoHover(false)}
+                onClick={() => {
+                  setIsDemoHover(!isDemoHover);
+                  setIsPageHover(false);
+                }}
+              >
                 DEMO
-              </Link>
+              </p>
               <ul
-                className={`ml-8 flex flex-col gap-8 border-black border-[1px] p-4  ${
+                className={`ml-8 flex flex-col gap-8 border-black border-[1px] p-4   ${
                   isDemoHover ? 'inline-block' : 'hidden'
                 }`}
               >
                 <li>
-                  <Link href="/demo-one" className="hover:text-orange">
+                  <Link href="/demo/demo-one" className="hover:text-orange">
                     DEMO ONE
                   </Link>
                 </li>
                 <li>
-                  <Link href="/demo-two" className="hover:text-orange">
-                    DEMO THREE
+                  <Link href="/demo/demo-two" className="hover:text-orange">
+                    DEMO TWO
                   </Link>
                 </li>
                 <li>
-                  <Link href="/demo-three" className="hover:text-orange">
+                  <Link href="/" className="hover:text-orange">
                     DEMO 3
                   </Link>
                 </li>
               </ul>
             </li>
-            <li
-              onClick={handleNav}
-              onPointerEnter={() => setIsPageHover(true)}
-              onPointerLeave={() => setIsPageHover(false)}
-              className={`py-6 flex flex-col gap-8 ${!nav ? 'hidden' : ''}`}
-            >
-              <Link href="/">PAGES</Link>
+            <li className={`py-6 flex flex-col gap-8 ${!nav ? 'hidden' : ''}`}>
+              <p
+                onClick={() => {
+                  setIsPageHover(!ispageHover);
+                  setIsDemoHover(false);
+                }}
+              >
+                PAGES
+              </p>
               <ul
                 className={`ml-8 flex flex-col gap-8 border-black border-[1px] p-4  ${
                   ispageHover ? 'inline-block' : 'hidden'
                 }`}
               >
                 <li>
-                  <Link href="/about-one" className="hover:text-orange">
+                  <Link href="/about/about-one" className="hover:text-orange">
                     ABOUT ONE
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about-two" className="hover:text-orange">
+                  <Link href="/about/about-two" className="hover:text-orange">
                     ABOUT TWO
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about-three" className="hover:text-orange">
+                  <Link href="/about/about-three" className="hover:text-orange">
                     ABOUT THREE
                   </Link>
                 </li>
                 <li>
-                  <Link href="/service-one" className="hover:text-orange">
+                  <Link
+                    href="/service/service-one"
+                    className="hover:text-orange"
+                  >
                     SERVICE ONE
                   </Link>
                 </li>
                 <li>
-                  <Link href="/service-two" className="hover:text-orange">
+                  <Link
+                    href="/service/service-two"
+                    className="hover:text-orange"
+                  >
                     SERVICE TWO
                   </Link>
                 </li>
                 <li>
-                  <Link href="/service-details" className="hover:text-orange">
+                  <Link
+                    href="/service/service-details"
+                    className="hover:text-orange"
+                  >
                     SERVICE DETAILS
                   </Link>
                 </li>
                 <li>
-                  <Link href="/service-details" className="hover:text-orange">
+                  <Link
+                    href="/contact/contact-one"
+                    className="hover:text-orange"
+                  >
                     CONTACT ONE
                   </Link>
                 </li>
                 <li>
-                  <Link href="/service-details" className="hover:text-orange">
+                  <Link
+                    href="/contact/contact-two"
+                    className="hover:text-orange"
+                  >
                     CONTACT TWO
                   </Link>
                 </li>
                 <li>
-                  <Link href="/service-details" className="hover:text-orange">
+                  <Link
+                    href="/contact/contact-three"
+                    className="hover:text-orange"
+                  >
                     CONTACT THREE
                   </Link>
                 </li>

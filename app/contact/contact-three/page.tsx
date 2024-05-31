@@ -32,54 +32,53 @@ const ContactPage = (props: Props) => {
               </h1>
             </ObserverButtomUp>
           </div>
-          <div className="absolute  left-0 right-0 -bottom-1/2    flex items-center justify-between flex-col flex-wrap sm:flex-row gap-8">
-            <div className="rounded-2xl shadow-contact-card flex-1 bg-white flex flex-col gap-4 py-[85px] px-[40px] justify-center items-center">
-              <div className="w-14 h-14">
-                <Image
-                  src={'/assets/contact/email.svg'}
-                  alt="email"
-                  className=" max-w-full inline-block  object-cover"
-                  width={60}
-                  height={60}
-                />
-              </div>
-              <h3 className="text-[#0c0b1a] font-semibold">
-                Contact with email
-              </h3>
-              <p className="text-[#495460]">info@example.com</p>
+        </div>
+      </div>
+      <div className="relative mt-[30px] mb-[800px] px-[30px] mx-auto md:m-0">
+        <div className="absolute  left-0 right-0  md:-bottom-[180px]    flex items-center h-fit border justify-between flex-col flex-wrap sm:flex-row gap-8 px-[30px] md:m-0 ">
+          <div className="rounded-2xl shadow-contact-card flex-1 bg-white flex flex-col gap-4  py-[40px] md:py-[85px] px-[10px] md:px-[40px] justify-center items-center w-full">
+            <div className="w-14 h-14">
+              <Image
+                src={'/assets/contact/email.svg'}
+                alt="email"
+                className=" max-w-full inline-block  object-cover"
+                width={60}
+                height={60}
+              />
             </div>
-            {/* 2 */}
-            <div className="rounded-2xl shadow-contact-card flex-1 bg-white flex flex-col gap-4 py-[85px] px-[40px] justify-center items-center">
-              <div className="w-14 h-14">
-                <Image
-                  src={'/assets/contact/phone.svg'}
-                  alt="email"
-                  className=" max-w-full inline-block  object-cover"
-                  width={60}
-                  height={60}
-                />
-              </div>
-              <h3 className="text-[#0c0b1a] font-semibold">Get in touch</h3>
-              <p className="text-[#495460]">(888) 456 7890</p>
+            <h3 className="text-[#0c0b1a] font-semibold">Contact with email</h3>
+            <p className="text-[#495460]">info@example.com</p>
+          </div>
+          {/* 2 */}
+          <div className=" rounded-2xl shadow-contact-card flex-1 bg-white flex flex-col gap-4  py-[40px] md:py-[85px] px-[10px] md:px-[40px] justify-center items-center w-full">
+            <div className="w-14 h-14">
+              <Image
+                src={'/assets/contact/phone.svg'}
+                alt="email"
+                className=" max-w-full inline-block  object-cover"
+                width={60}
+                height={60}
+              />
             </div>
-            {/* 3 */}
-            <div className="rounded-2xl shadow-contact-card flex-1 bg-white flex flex-col gap-4 py-[85px] px-[40px] justify-center items-center">
-              <div className="w-14 h-14">
-                <Image
-                  src={'/assets/contact/officelocation.svg'}
-                  alt="email"
-                  className=" max-w-full inline-block  object-cover"
-                  width={60}
-                  height={60}
-                />
-              </div>
-              <h3 className="text-[#0c0b1a] font-semibold">Office Location </h3>
-              <p className="text-[#495460]">San Francisco, CA, 94103, USA</p>
+            <h3 className="text-[#0c0b1a] font-semibold">Get in touch</h3>
+            <p className="text-[#495460]">(888) 456 7890</p>
+          </div>
+          {/* 3 */}
+          <div className="rounded-2xl shadow-contact-card flex-1 bg-white flex flex-col gap-4  py-[40px] md:py-[85px] px-[10px] md:px-[40px] justify-center items-center w-full">
+            <div className="w-14 h-14">
+              <Image
+                src={'/assets/contact/officelocation.svg'}
+                alt="email"
+                className=" max-w-full inline-block  object-cover"
+                width={60}
+                height={60}
+              />
             </div>
+            <h3 className="text-[#0c0b1a] font-semibold">Office Location </h3>
+            <p className="text-[#495460]">San Francisco, CA, 94103, USA</p>
           </div>
         </div>
       </div>
-
       {/* contact form and banner */}
       <div className="mt-[300px] flex flex-col md:flex-row gap-8 items-center justify-between h-fit px-[30px] mx-auto">
         <div className="flex-1 border">
@@ -97,7 +96,7 @@ const ContactPage = (props: Props) => {
             </p>
           </div>
           {/* banner */}
-          <div className="w-full h-[600px]   border">
+          <div className="w-full h-fit md:h-[500px]   border">
             <Image
               src={'/assets/contact/secondarybanner.webp'}
               alt="secondary banner"
@@ -108,7 +107,7 @@ const ContactPage = (props: Props) => {
           </div>
         </div>
         <div className="flex-1 border">
-          <div className="flex flex-col md:flex-row items-center gap-8 ">
+          <form className="flex flex-col md:flex-row items-center gap-8 z-10">
             <div className="w-full flex gap-4">
               <div className="w-full flex-1">
                 <ContactInput
@@ -125,7 +124,7 @@ const ContactPage = (props: Props) => {
                 />
               </div>
             </div>
-          </div>
+          </form>
           <div className="flex justify-between flex-col md:flex-row items-center gap-4 ">
             <div className="w-full flex gap-4">
               <div className="w-full flex-1">
@@ -186,7 +185,7 @@ const ContactPage = (props: Props) => {
             <CallToActionBtn text="CONTACT US" />
           </ObserverButtomUp>
         </div>
-        <div className="flex-1 grid gap-y-[45px]  grid-rows-[auto_auto] grid-cols-2 auto-cols-fr grid-flow-row max-w-[699px] mt-[8px]">
+        <div className="flex-1 grid gap-y-[45px]  grid-rows-[auto_auto] grid-cols-1 md:grid-cols-2 auto-cols-fr grid-flow-row max-w-[699px] mt-[8px]">
           {/* 1 */}
           <div className="flex gap-x-[25px] gap-y-[25px] justify-start items-start">
             <div className="">
