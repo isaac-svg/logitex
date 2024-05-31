@@ -13,6 +13,7 @@ const config: Config = {
         'why-we-are-banner': 'url("/assets/home/bigairplane.webp")',
         'contact-banner':
           'linear-gradient(rgba(12, 11, 26, .98), rgba(12, 11, 26, 0) 77%), url("/assets/contact/banner.webp") ',
+        'service-banner': 'url("/assets/service/banner.webp")',
 
         glasmorphism:
           'linear-gradient(rgba(255, 255, 255, .04), rgba(153, 153, 153, .04))',
@@ -61,6 +62,7 @@ const config: Config = {
         buttomup: 'buttomup 0.3s ease-in forwards',
         wiggle: 'wiggle 1s ease-in-out infinite',
         leftright: 'leftright  0.3s ease-in forwards',
+        scaleup: 'scaleup 0.4s ease-in forwards',
       },
       keyframes: {
         buttomup: {
@@ -70,6 +72,13 @@ const config: Config = {
         topdown: {
           '0%': { opacity: '0', transform: 'translateY(40px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        scaleup: {
+          '0%': { transform: ' scale(1.10, 1.10) ' },
+          '50%': { transform: ' scale(1.08, 1.08) ' },
+          '75%': { transform: ' scale(1.06, 1.06) ' },
+          '80%': { transform: ' scale(1.03, 1.03) ' },
+          '100%': { transform: ' scale(1, 1)' },
         },
         leftright: {
           '0%': { opacity: '0', transform: 'translateX(-40px)' },
