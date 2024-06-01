@@ -10,7 +10,7 @@ type Props = {};
 const HomeHero = (props: Props) => {
   return (
     <Banner bgimage="/assets/home/herobanner.webp">
-      <NavBar />
+      
       <div className=" h-[400px]  mx-auto flex flex-col text-center top-[0%] left-[0%] right-[0%] bottom-auto text-[#d2d1e9] relative mt-5 max-w-3xl gap-8">
         <ObserverButtomUp>
           <p className="text-base leading-6 tracking-wider ">
