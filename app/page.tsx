@@ -8,10 +8,11 @@ import Services from './components/sections/home/services';
 import Contact from './components/sections/home/contact';
 import WhyWeAre from './components/sections/home/whyweare';
 import WhatWeDo from './components/sections/home/whatwedo';
+import Footer from './components/sections/footer/footer';
 
 export default function Home() {
   return (
-    <main className="w-full overflow-x-clip h-[4000px]">
+    <main className="w-full overflow-x-clip h-auto">
       <HomeHero />
       <HomeAbout />
       <Logistics />

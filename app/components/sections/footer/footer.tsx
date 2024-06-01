@@ -31,7 +31,7 @@ const resources = [
 ];
 const Footer = (props: Props) => {
   return (
-    <footer className="bg-[#000] pt-[80px] flex flex-col gap-8 text-[#d2d1e9] px-[20px]">
+    <footer className="bg-[#000] pt-[80px] flex flex-col gap-8 text-[#d2d1e9] px-[20px]  ">
       {/*  */}
 
       <div className="flex md:flex-row flex-col gap-4 h-fit">
