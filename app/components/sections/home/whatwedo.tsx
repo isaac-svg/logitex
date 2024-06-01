@@ -8,7 +8,7 @@ type Props = {};
 
 const WhatWeDo = (props: Props) => {
   return (
-    <div className="flex mt-[60px] flex-col md:flex-row gap-8 items-center justify-between px-[30px] bg-white">
+    <div className="flex mt-[60px] flex-col md:flex-row gap-8 items-center justify-between px-[30px] bg-white pt-28">
       {/* message */}
 
       <div className="flex flex-col  flex-[0.6] items-start ">
