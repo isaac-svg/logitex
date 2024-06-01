@@ -8,7 +8,7 @@ const Testimonials = (props: Props) => {
   return (
     <section className="flex gap-8 items-center py-40 flex-col-reverse md:flex-row justify-between">
       <div className="flex-1  px-[30px] w-full  h-[700px] md:pl-[110px] relative ">
-        <div className="w-full relative md:w-[525px] h-[700px]  ">
+        <div className="w-full relative md:w-[525px] h-full  ">
           <Image
             src={'/assets/home/engineermarking.webp'}
             alt="engineergreencaptablet"
