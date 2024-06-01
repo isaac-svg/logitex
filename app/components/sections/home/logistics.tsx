@@ -6,7 +6,7 @@ type Props = {};
 const Logistics = (props: Props) => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 auto-cols-fr justify-center items-start">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 auto-cols-fr justify-center items-start">
         <LogisticsCard
           description="Efficient aerial logistics for seamless cargo transport, ensuring swift global connections."
           heading="Warehouse distribution"

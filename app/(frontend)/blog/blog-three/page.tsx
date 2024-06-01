@@ -1,10 +1,9 @@
 'use client';
-import CallToActionBtn from '@/app/components/calltoactionbutton';
-import NavBar from '@/app/components/nav';
-import ObserverButtomUp from '@/app/components/oberser';
-import Card from '@/app/components/sections/blog/card';
-import Image from 'next/image';
-import Link from 'next/link';
+
+import NavBar from '@/app/components/shared/nav';
+import ObserverButtomUp from '@/lib/oberser';
+import BlogCard from '@/app/components/sections/blog/card';
+
 import React, { useState } from 'react';
 
 type Props = {};
@@ -57,13 +56,37 @@ const Blog = (props: Props) => {
           </p>
         </ObserverButtomUp>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-cols-fr justify-center items-start   pl-[60px] pb-[60px]">
-        <Card imgsrc="/assets/blog/sealbox.webp" author="" title="" />
-        <Card imgsrc="/assets/blog/checkbox.webp" author="" title="" />
-        <Card imgsrc="/assets/blog/pullingcart.webp" author="" title="" />
-        <Card imgsrc="/assets/blog/van.webp" author="" title="" />
-        <Card imgsrc="/assets/blog/plane.webp" author="" title="" />
-        <Card imgsrc="/assets/blog/ship.webp" author="" title="" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-cols-fr justify-center items-start  mx-auto px-[10px] md:pl-[60px] pb-[60px] ">
+        <BlogCard
+          imgsrc="/assets/blog/sealbox.webp"
+          author="By Bruno Benjamin"
+          title="From ship to store: exploring the world of ocean freight statistics"
+        />
+        <BlogCard
+          imgsrc="/assets/blog/checkbox.webp"
+          author="By Charlotte Nyugen "
+          title="Deliverying excelence to your doorstep"
+        />
+        <BlogCard
+          imgsrc="/assets/blog/pullingcart.webp"
+          author="By Bruno Benjamin"
+          title="Building robust statistics for uncertain times"
+        />
+        <BlogCard
+          imgsrc="/assets/blog/van.webp"
+          author="By Bruno Benjamin"
+          title="The future of autonomous vehicles in logistics"
+        />
+        <BlogCard
+          imgsrc="/assets/blog/plane.webp"
+          author="By Bruno Benjamin"
+          title="Green logistics: sustainability in the modern supply chain"
+        />
+        <BlogCard
+          imgsrc="/assets/blog/ship.webp"
+          author="By Charlotte Nyugen "
+          title="From ship to store: exploring the world of ocean freight statistics"
+        />
       </div>
     </section>
   );

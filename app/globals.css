@@ -116,10 +116,10 @@ body {
   transition: transform 0.5s, width 0.5s;
 }
 .line-1 {
-  transform: translate(-50%, -15px);
+  transform: translate(-50%, -10px);
 }
 .line-3 {
-  transform: translate(-50%, 10px);
+  transform: translate(-50%, 5px);
 }
 .openmenu .line-1 {
   transform: translate(-50%, -50%) rotate(-45deg);

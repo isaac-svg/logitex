@@ -16,7 +16,7 @@ const plaincards = [
     title: 'Ocean freight',
     description:
       'Efficient ariel logistics for cargo transport, ensuring connections',
-    imgsrc: '/assets/service/ocean.webp',
+    imgsrc: '/assets/service/ship.webp',
   },
   {
     title: 'Raod freight',
@@ -55,10 +55,6 @@ const WhyWeProvideService = (props: Props) => {
               key={index}
             />
           ))}
-        </div>
-        {/* contact */}
-        <div className="w-full">
-          <Contact />
         </div>
       </div>
     </div>

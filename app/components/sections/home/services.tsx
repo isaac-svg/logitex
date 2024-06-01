@@ -1,7 +1,7 @@
 import React from 'react';
-import ServiceCard from '../../servicescard';
-import ObserverButtomUp from '../../oberser';
-import CallToActionBtn from '../../calltoactionbutton';
+import ServiceCard from '../../shared/servicescard';
+import ObserverButtomUp from '../../../../lib/oberser';
+import CallToActionBtn from '../contact/calltoactionbutton';
 
 type Props = {};
 

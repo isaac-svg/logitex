@@ -1,39 +1,41 @@
 import React from 'react';
-import ObserverButtomUp from '../../oberser';
-import Textarea from '../../textarea';
-import Select from '../../Select';
+import ObserverButtomUp from '../../../../lib/oberser';
+import Textarea from '../contact/textarea';
+import Select from '../contact/Select';
 import Image from 'next/image';
-import Input from '../../input';
-import CallToActionBtn from '../../calltoactionbutton';
-import Checkbox from '../../checkbox';
+import Input from '../contact/input';
+import CallToActionBtn from '../contact/calltoactionbutton';
+import Checkbox from '../contact/checkbox';
 
 type Props = {};
 
 const ContactService = (props: Props) => {
   return (
-    <div className="flex  max-fit flex-col md:flex-row bg-white w-full ">
-      <div className="flex-1 h-full flex border-orange border">
+    <div className="flex px-[30px] max-h-fit flex-col md:flex-row bg-white w-full ">
+      <div className="flex-1  flex ">
         <Image
           src={'/assets/home/womanmarkingbox.webp'}
           alt="banner"
-          height={500}
-          width={200}
-          className="h-full w-full object-cover max-w-full inline-block align-middle"
+          height={1000}
+          width={700}
+          className="w-full object-cover max-w-full inline-block align-middle"
         />
       </div>
       {/* form  */}
-      <div className="flex-1 bg-[#fff] px-4 py-[120px] border">
-        <div className="flex flex-col gap-6">
+      <div className="flex-1 bg-[#fff] px-4 py-[120px]">
+        <div className="flex flex-col gap-8">
           <ObserverButtomUp>
-            <div className="flex items-center gap-4 ">
+            <div className="flex items-center gap-6 ">
               {' '}
-              <div className="bg-[#d2d1e9] w-8 h-1  " />{' '}
+              <div className="bg-[#d2d1e9] w-8 h-[1px]  " />{' '}
               <h3 className="text-[#d2d1e9] text-bold uppercase">
                 SHOPPING COST
               </h3>
             </div>
+          </ObserverButtomUp>
+          <ObserverButtomUp>
             <div className="max-w-[800px]">
-              <h2 className="text-4xl  text-[#1f1e26] font-extrabold  m-0 ">
+              <h2 className="text-4xl  mb-4 text-[#1f1e26] font-extrabold  m-0 ">
                 Inquire about cost of shipping{' '}
               </h2>
             </div>

@@ -1,17 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
-import ObserverButtomUp from '../../oberser';
-import HorizontalSlideEffect from '../../horizontalslideinobserver';
-import Listitem from '../../listitem';
+import ObserverButtomUp from '../../../../lib/oberser';
+import HorizontalSlideEffect from '../../../../lib/horizontalslideinobserver';
+import Listitem from '../contact/listitem';
 
 type Props = {};
 
 const WhatWeDo = (props: Props) => {
   return (
-    <div className="flex mt-[60px] flex-col md:flex-row gap-8 items-center justify-between px-[30px]">
+    <div className="flex mt-[60px] flex-col md:flex-row gap-8 items-center justify-between px-[30px] bg-white">
       {/* message */}
 
-      <div className="flex flex-col  flex-[0.6] items-start border">
+      <div className="flex flex-col  flex-[0.6] items-start ">
         <ObserverButtomUp>
           <h4 className="uppercase text-[#666] flex-none font-semibold  leading-5  ">
             WHAT WE DO
@@ -99,7 +99,7 @@ const WhatWeDo = (props: Props) => {
       </div>
       <div className="w-full mx-auto relative h-96 md:hidden ">
         {/* smaller image */}
-        <div className="overflow-hidden relative md:hidden w-full h-full border">
+        <div className="overflow-hidden relative md:hidden w-full h-full ">
           <Image
             src={'/assets/home/engineerwedobig.webp'}
             alt="engineer"

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { text } from 'stream/consumers';
-import ObserverButtomUp from '../../oberser';
+import ObserverButtomUp from '../../../../lib/oberser';
 import Contact from '../home/contact';
 import ShadowCard from '../../ui/shadowcard';
 import SolutionListItem from '../../ui/solutionlistitem';

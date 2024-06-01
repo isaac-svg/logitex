@@ -60,6 +60,7 @@ const config: Config = {
 
       animation: {
         buttomup: 'buttomup 0.3s ease-in forwards',
+        topdown: 'topdown 0.3s ease-in forwards',
         wiggle: 'wiggle 1s ease-in-out infinite',
         leftright: 'leftright  0.3s ease-in forwards',
         scaleup: 'scaleup 0.4s ease-in forwards',
@@ -70,8 +71,8 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         topdown: {
-          '0%': { opacity: '0', transform: 'translateY(40px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '0%': { opacity: '1', transform: 'translateY(0px)' },
+          '100%': { opacity: '0', transform: 'translateY(40px)' },
         },
         scaleup: {
           '0%': { transform: ' scale(1.10, 1.10) ' },

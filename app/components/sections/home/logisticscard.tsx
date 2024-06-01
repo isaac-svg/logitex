@@ -15,13 +15,17 @@ const LogisticsCard = ({ description, heading, imgsrc }: Props) => {
         {heading}
       </div>
       <div className="mb-[35px] ">
-        <Image
-          src={imgsrc}
-          alt="Image"
-          className="object-cover inline-block max-w-full align-middle border-0 overflow-clip w-[354px] h-[320px] aspect-logcard"
-          height={100}
-          width={100}
-        />
+        {/*  */}
+        <div className="relative  md:w-full border h-[300px]">
+          <Image
+            src={imgsrc}
+            className="object-cover h-full"
+            alt=""
+            height={300}
+            width={300}
+          />
+        </div>
+        {/*  */}
       </div>
       <p className="text-[#666] mb-[35px] text-base">{description}</p>
       <div className="flex gap-[10px] justify-start items-center cursor-pointer">

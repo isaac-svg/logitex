@@ -1,9 +1,9 @@
 import React from 'react';
-import Banner from '../banner';
-import NavBar from '../../nav';
-import ObserverButtomUp from '../../oberser';
+import Banner from '../../shared/banner';
+import NavBar from '../../shared/nav';
+import ObserverButtomUp from '../../../../lib/oberser';
 import Link from 'next/link';
-import CallToActionBtn from '../../calltoactionbutton';
+import CallToActionBtn from '../contact/calltoactionbutton';
 
 type Props = {};
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Glassmorphismcard from '../../glassmorphismcard';
+import Glassmorphismcard from '../../shared/glassmorphismcard';
 
 type Props = {};
 

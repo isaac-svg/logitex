@@ -16,8 +16,8 @@ const ScaleOut = ({
   threshold?: number;
 }) => {
   const { ref, inView, entry } = useInView({
-    // triggerOnce: false,
-    // threshold: threshold,
+    triggerOnce: true,
+    threshold: threshold,
   });
   //
   return (

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import ObserverButtomUp from '../../oberser';
+import ObserverButtomUp from '../../../../lib/oberser';
 import { useInView } from 'react-intersection-observer';
 
 type Props = {};
@@ -52,8 +52,8 @@ const Service = (props: Props) => {
             className={`object-cover w-full transition-transform  ${
               inView ? 'animate-scaleup' : ''
             } `}
-            width={400}
-            height={300}
+            width={1000}
+            height={800}
           />
         </div>
       </div>

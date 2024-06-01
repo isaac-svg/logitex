@@ -5,7 +5,6 @@ type Props = {
   children: React.ReactNode;
   threshold?: number;
 };
-import { InView } from 'react-intersection-observer';
 import { useInView } from 'react-intersection-observer';
 
 const ObserverButtomUp = ({ children, threshold }: Props) => {

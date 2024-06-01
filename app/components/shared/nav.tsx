@@ -2,8 +2,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import DemoDropDown from './demodropdown';
 import PagesDropDown from './pagesdropdown';
+import DemoDropDown from './demodropdown';
 
 type Props = {};
 
@@ -23,7 +23,7 @@ const NavBar = (props: Props) => {
 
   return (
     <div className=" absolute top-0 left-0 right-0 flex flex-col ">
-      <div className="rounded-div flex items-center justify-between h-20 font-bold border-b-[#253036] border-b-[1px] z-[999]  relative px-4">
+      <div className="rounded-div flex items-center justify-between h-20 font-bold border-b-[#253036] border-b-[1px] z-[99]  relative px-4">
         <div className="h-12 w-44 relative  flex items-center justify-center ">
           <Image
             src={'/assets/home/logo.svg'}
@@ -53,11 +53,11 @@ const NavBar = (props: Props) => {
             </div>
 
             <li className="h-full flex items-center w-fit  fancy-link">
-              SERVICE
+              <Link href={'/service/service-details'}>SERVICE</Link>
             </li>
             <li className="h-full flex items-center w-fit  fancy-link">BLOG</li>
             <li className="h-full flex items-center w-fit  fancy-link">
-              CONTACT
+              <Link href={'contact/contact-three'}>CONTACT</Link>
             </li>
             {/* <li>PAGES</li> */}
           </ul>
@@ -70,14 +70,14 @@ const NavBar = (props: Props) => {
         </div>
         <div className="md:hidden inline-block cursor-pointer ">
           <div
-            className={`flex  w-10 h-10  items-center relative ${
+            className={`flex  w-10  items-center relative ${
               nav ? 'openmenu' : ''
             }`}
             onClick={handleNav}
           >
-            <span className="w-full bg-[#d2d1e9]  h-1 block rounded-sm absolute top-1/2 left-1/2  center-vertical line-1"></span>
-            <span className="w-full bg-[#d2d1e9]  h-1 block rounded-sm absolute   center-vertical line-2"></span>
-            <span className="w-full bg-[#d2d1e9]  block h-1 rounded-sm absolute   center-vertical line-3 top-1/2 left-1/2"></span>
+            <span className="w-full bg-[#d2d1e9]   h-[0.2rem] block rounded-sm absolute top-1/2 left-1/2  center-vertical line-1"></span>
+            <span className="w-full bg-[#d2d1e9]  h-[0.2rem] block rounded-sm absolute   center-vertical line-2"></span>
+            <span className="w-full bg-[#d2d1e9]  block  h-[0.2rem] rounded-sm absolute   center-vertical line-3 top-1/2 left-1/2"></span>
           </div>
         </div>{' '}
       </div>
@@ -86,13 +86,13 @@ const NavBar = (props: Props) => {
           nav ? '   duration-200 ' : ''
         }`}
       >
-        <div className="overflow-x-hidden h-screen overflow-auto relative z-[99]">
+        <div className="overflow-x-hidden  overflow-auto relative z-[99]">
           <ul
             className={`${
               nav
-                ? 'md:hidden fixed  top-20 flex flex-col text-xs w-full bg-fixed  ease-in duration-300 z-[999]  bg-white h-screen overflow-y-auto pb-[60px]  '
+                ? 'md:hidden fixed  top-20 flex flex-col text-xs w-full bg-fixed  ease-in duration-300 z-[99]  bg-white h-screen overflow-y-auto pb-[60px]  '
                 : 'fixed top-20   flex flex-col items-start justify-between ease-in duration-300 z-10 w-full'
-            } pl-8 pr-4 `}
+            } px-2`}
           >
             <li
               className={`py-6 flex flex-col gap-8 transition-all duration-700 ${
@@ -111,7 +111,7 @@ const NavBar = (props: Props) => {
                 DEMO
               </p>
               <ul
-                className={`ml-8 flex flex-col gap-8 border-black border-[1px] p-4   ${
+                className={` flex py-4 flex-col gap-8 pl-4 border-y-black border-y-[1px]   ${
                   isDemoHover ? 'inline-block' : 'hidden'
                 }`}
               >
@@ -142,7 +142,7 @@ const NavBar = (props: Props) => {
                 PAGES
               </p>
               <ul
-                className={`ml-8 flex flex-col gap-8 border-black border-[1px] p-4  ${
+                className={`flex py-4 flex-col gap-8 pl-4 border-y-black border-y-[1px]  ${
                   ispageHover ? 'inline-block' : 'hidden'
                 }`}
               >

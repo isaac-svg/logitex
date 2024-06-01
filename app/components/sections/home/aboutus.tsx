@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import ObserverButtomUp from '../../oberser';
+import ObserverButtomUp from '../../../../lib/oberser';
 
 type Props = {};
 
@@ -15,16 +15,17 @@ const HomeAbout = (props: Props) => {
               src={'/assets/home/shipwithbanner.webp'}
               alt="about us"
               className=" h-fit w-full object-cover mx-auto"
-              height={500}
-              width={200}
+              width={400}
+              height={700}
             />
+
             <div className="absolute bg-orange w-[110%] h-44 bottom-12 -left-[10%] right-0 z-50 before:bg-red-300 before:h-full flex items-center text-white  gap-4">
-              <div className="flex flex-1 border flex-col gap-2 text-center">
+              <div className="flex flex-1  flex-col gap-2 text-center">
                 <h4 className="text-5xl font-medium">452k</h4>
                 <p className="text-base font-bold">SAFELY SHIPPED</p>
               </div>
               <div className="w-[2px] h-4/5 bg-white" />
-              <div className="flex flex-1 border flex-col gap-2 text-center">
+              <div className="flex flex-1  flex-col gap-2 text-center">
                 <h4 className="text-5xl font-medium">14k</h4>
                 <p className="text-base font-bold">COMPANY WE HELP</p>
               </div>

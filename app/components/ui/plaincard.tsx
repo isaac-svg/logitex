@@ -15,8 +15,8 @@ const PlainCard = ({ description, imgsrc, title }: Props) => {
           src={imgsrc}
           alt={title}
           className="object-cover w-full h-full"
-          width={60}
-          height={60}
+          width={600}
+          height={600}
         />
       </div>
       <div className="w-[90%] flex flex-col items-center gap-4">
