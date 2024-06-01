@@ -31,7 +31,7 @@ const Testimonials = (props: Props) => {
           </p>
         </ObserverButtomUp>
         <ObserverButtomUp>
-          <p className="mb-[10px] text-[#666] font-medium text-base">
+          <p className="mb-[10px] text-[#666] font-medium text-xl">
             Streamlining global logistics with innovative solutions, we optimize
             efficiency, cut costs, and{' '}
             <span className="text-[#1f1e26]">

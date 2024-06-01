@@ -25,7 +25,7 @@ const Services = (props: Props) => {
         </div>
       </ObserverButtomUp>
       <ObserverButtomUp>
-        <p className="text-[#666] text-lg max-w-[800px] w-4/5">
+        <p className="text-[#666] text-xl mx-auto max-w-[800px] w-4/5">
           Streamlining global logistics with innovative solutions, we optimize
           efficiency, cut costs, and{' '}
           <span className="text-[#333]">
@@ -37,7 +37,7 @@ const Services = (props: Props) => {
       <ObserverButtomUp>
         <CallToActionBtn text="GET A QUOTE" />
       </ObserverButtomUp>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-cols-fr justify-center items-start w-full border px-[30px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-cols-fr justify-center items-start w-full border px-[30px] mt-4">
         {/* <div className="flex flex-col gap-4 "> */}
         <ServiceCard
           cardbanner="/assets/home/womantying.webp"
@@ -57,7 +57,6 @@ const Services = (props: Props) => {
           title="Packaging and transportation"
           icon="/assets/home/packaging.svg"
         />
-        {/* </div> */}
       </div>
     </section>
   );
